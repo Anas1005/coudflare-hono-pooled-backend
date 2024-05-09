@@ -1,6 +1,10 @@
 # Cloudflare with Hono and Prisma Accelerator Setup Guide
 
 This guide will walk you through the process of setting up Cloudflare with Hono and Prisma Accelerator as a pooled connection. Prisma Accelerator provides additional functionality for Prisma, including connection pooling, which ensures that multiple workers or threads in your application can efficiently share and reuse a pool of pre-established database connections. This reduces resource consumption and improves performance.
+
+**Note:** Cloudflare Workers allow environment variables in the wrangler.toml file through built-in support for wrangler secret management.
+
+
 ## Prerequisites
 
 
