@@ -66,10 +66,11 @@ Before proceeding, ensure you have the following installed:
     ```
 
 10. **Generate Prisma Client:**
-    - Generate Prisma client code based on your schema definition file and database connection information.
+    - Generate Prisma client code based on your schema definition file and database connection information. Since Cloudflare Workers have specific requirements for bundle optimization, it's necessary to include the `--no-engine` flag to ensure that bubdle is generated without any Prisma engine files.
     ```bash
     npx prisma generate --no-engine
     ```
+
 
 11. **Update Schema.prisma:**
     - Update your Schema.prisma file with the necessary generator and datasource blocks to use Prisma Accelerator and the defined database URLs.
