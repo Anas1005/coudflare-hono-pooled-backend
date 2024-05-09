@@ -2,7 +2,14 @@
 
 This guide will walk you through the process of setting up Cloudflare with Hono and Prisma Accelerator as a pooled connection. Prisma Accelerator provides additional functionality for Prisma, including connection pooling, which ensures that multiple workers or threads in your application can efficiently share and reuse a pool of pre-established database connections. This reduces resource consumption and improves performance.
 
-**Note:** Cloudflare Workers allow environment variables in the wrangler.toml file through built-in support for wrangler secret management. It's important to note that the CLI picks up these variables from the .env file, not the backend.
+**Notes:**
+- Cloudflare Workers allow environment variables in the wrangler.toml file through built-in support for wrangler secret management. It's important to note that the CLI picks up these variables from the .env file, not the backend.
+- When developing npm packages:
+  1. Organize common functionalities in a shared module or folder.
+  2. Use Zod type inference inside the common module to export common services.
+  3. Publish the module to npm for easy consumption by other projects.
+  4. Set "declaration" to true in tsconfig.json to generate .d.ts files.
+  5. Ensure not to include .ts files in the published package, only include .js and .d.ts files.
 
 ## Prerequisites
 
