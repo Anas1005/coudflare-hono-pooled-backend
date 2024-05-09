@@ -1,0 +1,21 @@
+name = "medium-backend"
+compatibility_date = "2023-12-01" 
+
+[vars]
+DATABASE_URL="prisma://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiM2FhNmY3YmYtMWZjOC00NjBiLWFlMjQtODA2MzQwMWRiZjA1IiwidGVuYW50X2lkIjoiMzYzYzlhNTE0NDNhM2Y2MTFkNGM0YzlkMDc2NDQwZGRjYmE4Y2Q4MjVmODFlMzBlNTcxYzEyN2YxNWRhMjNmOCIsImludGVybmFsX3NlY3JldCI6Ijc2NjI4ZDA1LTJiYjEtNGMzMi04Yzg2LTdiOGQ4YzAzNjI3NSJ9.WM0TN1K9RoKwG3x_t56rKXRkCZKNDNFL7zKCiqHzrn8"
+
+# [[kv_namespaces]]
+# binding = "MY_KV_NAMESPACE"
+# id = "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+
+# [[r2_buckets]]
+# binding = "MY_BUCKET"
+# bucket_name = "my-bucket"
+
+# [[d1_databases]]
+# binding = "DB"
+# database_name = "my-database"
+# database_id = ""
+
+# [ai]
+# binding = "AI"
