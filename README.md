@@ -86,4 +86,29 @@ Before proceeding, ensure you have the following installed:
     }
     ```
 
+12. **Run Development Server:**
+    - Start the development server using the appropriate command specified by Hono. Refer to the Hono documentation for syntax and usage details.
+    ```bash
+    npm run dev
+    ```
+    Ensure to refer to the Hono documentation for syntax and usage details to mimic the express like functionalities and to write the code and logic for your Cloudflare 
+    application.
+
+
+
+**Deployment Steps:**
+
+  **Deploy to Cloudflare Workers:**
+    - Before deploying, ensure you are logged in to Cloudflare using the Wrangler CLI. Run the following commands to log in and verify your credentials:
+    ```bash
+    npm run wrangler login
+    npm run wrangler whoami
+    ```
+    - Once logged in, deploy your application to Cloudflare Workers using the following command:
+    ```bash
+    npm run deploy
+    ```
+    This command will build and deploy your application to Cloudflare's network. Ensure that your Wrangler configuration file (wrangler.toml) is correctly set up with the necessary settings for your deployment.
+
+
 
