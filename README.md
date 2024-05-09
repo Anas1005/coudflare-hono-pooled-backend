@@ -40,33 +40,38 @@ Before proceeding, ensure you have the following installed:
 
 4. **Hardcode the URL in Schema.prisma:**
     - In the Schema.prisma file, you hardcode the database URL that Prisma will use to connect to your database. This URL contains the necessary connection information, such as the database host, port, username, password, and database name.
+  
+6. **Run the migration command**
+     ```bash
+    npx prisma migrate dev --name "Initialised Schema"
+    ```
 
-5. **Set DIRECT_URL in .env:**
+7. **Set DIRECT_URL in .env:**
     - The DIRECT_URL environment variable specifies the direct database URL that Prisma will use for connections. This URL is used when establishing direct connections to the database without using a connection pool.
     ```plaintext
     DIRECT_URL = "your_database_url"
     ```
 
-6. **Set DATABASE_URL(Connection Pool String) in wrangler.toml:**
+8. **Set DATABASE_URL(Connection Pool String) in wrangler.toml:**
     - Update your wrangler.toml file with the DATABASE_URL variable, which defines the connection pool string for Prisma Accelerator.
     ```toml
     [vars]
     DATABASE_URL="your_connection_pool_string"
     ```
 
-7. **Install Prisma Accelerator Extension:**
+9. **Install Prisma Accelerator Extension:**
     - Prisma Accelerator Extension provides additional functionality for Prisma, including connection pooling and performance optimization.
     ```bash
     npm i @prisma/extension-accelerate
     ```
 
-8. **Generate Prisma Client:**
+10. **Generate Prisma Client:**
     - Generate Prisma client code based on your schema definition file and database connection information.
     ```bash
     npx prisma generate --no-engine
     ```
 
-9. **Update Schema.prisma:**
+11. **Update Schema.prisma:**
     - Update your Schema.prisma file with the necessary generator and datasource blocks to use Prisma Accelerator and the defined database URLs.
     ```prisma
     generator client {
