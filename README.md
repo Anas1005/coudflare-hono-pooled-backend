@@ -98,7 +98,7 @@ Before proceeding, ensure you have the following installed:
 
 **Deployment Steps:**
 
-  **Deploy to Cloudflare Workers:**
+13. **Deploy to Cloudflare Workers:**
     - Before deploying, ensure you are logged in to Cloudflare using the Wrangler CLI. Run the following commands to log in and verify your credentials:
     ```bash
     npm run wrangler login
