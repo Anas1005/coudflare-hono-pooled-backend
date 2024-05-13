@@ -15,7 +15,7 @@ app.get('/', (c) => {
   }).$extends(withAccelerate())
   
   
-  return c.json({data: "Hello"})
+  return c.json({data: "Helloooooo"})
 })
 
 export default app
